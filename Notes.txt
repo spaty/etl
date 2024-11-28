@@ -1,0 +1,14 @@
+En gros on à deux db une de destination c'est à dire une ou il y à les
+données de base et une de destination c'es à a dire la db ou va 
+aller les donnéees à la fin.
+
+C'est pourquoi les deux sont présentes dans docker compose.
+
+De plus, dans le docker compose la référence depends ON veut dire 
+que le script python ne doit se lancer que dans le cas ou les deux db ont bien été créees.
+
+Pourquoi pas de volumes dans la db de destination ? Car, il faut
+pour des raisons de test.
+
+Le elt script est la pour bien spécifier à docker que l'on envoit des données
+de la source a la destination, c'est son job.
